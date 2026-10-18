@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import "@fontsource-variable/bricolage-grotesque/standard.css";
 import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>{children}</body>
+      <Analytics />
     </html>
   );
 }
